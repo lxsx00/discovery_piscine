@@ -15,3 +15,9 @@ if [ -n "$3" ]
 then
  echo $3
 fi
+
+# -z Checks if the given string operand size is zero; if it is zero length, then it returns true
+# -n Checks if the given string operand size is non-zero; if it is nonzero length, then it returns true
+
+#The if...fi statement is the fundamental control statement that allows Shell to make decisions and execute statements conditionally
+
