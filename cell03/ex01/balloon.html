@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Balloon</title>
+	
+<style>
+body {
+	display: flex;
+	height: 100vh;
+	flex-direction: column-reverse;
+	justify-content: center;
+	background-color: whitesmoke;
+}
+    
+h1 {
+    font-family: fantasy;
+    color: black;
+    text-align: center;   
+}
+    
+p {
+    font-family: fantasy;
+    color: black;
+    text-align: center; 
+    margin: 0px;
+}
+    
+.ballon { 
+	width: 200px;
+	height: 200px;
+	margin: 10px auto 20px; 
+	border-radius:50%;
+	color: black; 
+} 
+.red {
+	background-color: red;
+}
+.green {
+	background-color: limegreen;
+}
+.blue {
+	background-color: darkblue;
+}
+ 
+</style>
+ 
+
+<script>
+function changeColor(change)
+{
+    if(change.classList.contains("red"))
+    {
+        change.classList.remove("red");
+		change.classList.add("green");
+    } else if(change.classList.contains("green")) {
+        change.classList.remove("green");
+		change.classList.add("blue");
+    }
+	else {
+		change.classList.remove("blue");
+		change.classList.add("red");
+	}
+    return false;
+}
+
+function handleClick(change)
+{
+	changeColor(change);
+	if (change.offsetWidth < "421")
+	{
+		change.style.width = (change.offsetWidth + 10) + "px";
+		change.style.height = (change.offsetHeight + 10) + "px";
+	}
+	else {
+		change.style.width = "200px";
+		change.style.height = "200px";
+	}
+}
+function onHover(change)
+{
+	invertColor(change);
+	change.style.width = Math.max(200,  change.offsetWidth - 5) + "px";
+	change.style.height = Math.max(200,  change.offsetHeight - 5) + "px";
+}
+
+function invertColor(change)
+{
+    if(change.classList.contains("green"))
+    {
+        change.classList.remove("green");
+		change.classList.add("blue");
+    }else if(change.classList.contains("blue"))
+	{
+        change.classList.remove("blue");
+		change.classList.add("red");
+    }
+	else {
+		change.classList.remove("red");
+		change.classList.add("green");
+	}
+    return false;
+}
+</script>	
+	
+			
+</head>
+<body>
+
+    <p>Make it smaller as the mouse leaves the balloon</p>
+    <p>Clink on it to make it bigger</p>
+    
+    <h1>Explode this balloon  
+    <i class="fa fa-bomb"></i>
+    </h1>
+    
+    
+    <div class="ballon red" onclick="handleClick(this);" onmouseleave="onHover(this)">
+	</div> 
+    
+</body>
+</html>
