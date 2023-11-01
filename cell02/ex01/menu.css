@@ -22,10 +22,11 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   outline: none;
-  color: white;
+  color: blue;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -33,7 +34,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: pink;
+  background-color: purple;
 }
 
 .dropdown-content {
@@ -59,7 +60,8 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: grey;
+  background-color: blue;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
