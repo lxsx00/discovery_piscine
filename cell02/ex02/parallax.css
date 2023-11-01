@@ -8,30 +8,33 @@ div {
 }
 
 .parallax {
-	background-color: black;
+	background-color: white;
 	background-attachment: fixed;
 	background-position: center center;
-	background-size: cover;
+	/*background-size: cover;*/    
 	background-repeat: no-repeat;
-	height: 100vh; /*as 100%*/
+	height: 100vh;
+    width: 100%;
 }
 
 .text {
 	position: relative;
 	top: 50%;
-	font-size: 50px;
+	font-size: 100px;
+    font-family: monospace;
 }
 
 .block {
-	background-color: black;
-	height: 1000px;
+	background-color: royalblue;
+	height: 2000px;
 }
 
 #img1 {
-	background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg");
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2JoYHae0CMBy0pdJqgqLGRwbtJviOvttAUjLoJ0p6Sg&s");
+
 }
 
 #img2 {
-	background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsphero.com%2Fblogs%2Fnews%2Ftypes-of-coding-languages&psig=AOvVaw3xfXohcfdbrJcwFVg63Qv_&ust=1698922031426000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNCspPXPooIDFQAAAAAdAAAAABAD");
-}
+	background-image: url("https://res.cloudinary.com/teepublic/image/private/s--PsuY5Z_1--/c_crop,x_10,y_10/c_fit,h_728/c_crop,g_north_west,h_827,w_1127,x_-192,y_-50/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-258,y_-262/c_mfit,g_north_east,u_misc:tapestry-l-s-gradient/e_displace,fl_layer_apply,x_0,y_34/l_upload:v1507037315:production:blanks:uue6kkaylik55suzvwsb/fl_layer_apply,g_north_west,x_0,y_0/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1548917248/production/designs/4117968_0.jpg");
 
+}
