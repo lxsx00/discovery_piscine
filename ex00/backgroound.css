@@ -1,0 +1,31 @@
+h1 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+button {
+    border: 0;
+    outline: solid;
+    outline-color: grey;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: progress;
+    width: 100%;
+    font-size: 18px;
+    font-family: fantasy;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.button-position {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 44%;
+}
