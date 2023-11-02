@@ -14,10 +14,18 @@ button {
     background-color: #000;
     text-align: center;
     cursor: progress;
-    width: 100%;
+    width: 150px;
+    height: 90px;
     font-size: 18px;
     font-family: fantasy;
+    position: absolute;
 }
+
+.button-size-1 {
+    width: 100px;
+    height: 60px;
+}
+
 
 button:hover {
     opacity: 0.5;
@@ -27,5 +35,5 @@ button:hover {
     margin: 0;
     position: absolute;
     top: 45%;
-    left: 44%;
+    left: 47%;
 }
