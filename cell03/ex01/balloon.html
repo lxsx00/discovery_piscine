@@ -67,7 +67,7 @@ function changeColor(change)
     return false;
 }
 
-function handleClick(change)
+function clickIt(change)
 {
 	changeColor(change);
 	if (change.offsetWidth < "421")
@@ -80,7 +80,7 @@ function handleClick(change)
 		change.style.height = "200px";
 	}
 }
-function onHover(change)
+function hoverFrom(change)
 {
 	invertColor(change);
 	change.style.width = Math.max(200,  change.offsetWidth - 5) + "px";
@@ -118,7 +118,7 @@ function invertColor(change)
     </h1>
     
     
-    <div class="ballon red" onclick="handleClick(this);" onmouseleave="onHover(this)">
+    <div class="ballon red" onclick="clickIt(this);" onmouseleave="hoverFrom(this)">
 	</div> 
     
 </body>
