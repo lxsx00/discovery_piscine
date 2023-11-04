@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>It's over 9000</title>
+
+<style>
+
+h1 {
+    font-family: fantasy;
+    font-size: 40px;
+    }
+    
+h2 {
+    font-family: fantasy;
+    font-size: 20px;
+    }
+    
+select {
+  padding: 12px 20px;
+  border: solid;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+    
+input[type=submit] {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+    
+</style>
+
+<script>
+    
+    
+//activate after it's completly done
+    
+ 
+setInterval(alertFunc, 30000)
+
+function alertFunc() {
+  alert("Please, use me...");
+}
+
+    
+ 
+function myCalculator() {
+			var z;
+    /* The parseInt method parses a value as a string and returns the first integer.
+    A radix parameter specifies the number system to use:
+    10 = decimal. */
+    
+			var x = parseInt(document.getElementById("firstNum").value, 10);
+			var y = parseInt(document.getElementById("secNum").value, 10);
+    
+			var sel = document.getElementById("dropDown");
+			var selection = sel.options[sel.selectedIndex].value;
+    
+			var add = document.getElementById("add");
+			var subtract = document.getElementById("subtract");
+			var multi = document.getElementById("multi");
+			var divi = document.getElementById("divi");
+			var modul = document.getElementById("modul");
+
+    if (selection == "add") {
+				z = parseFloat(x) + parseFloat(y);
+			}
+			if (selection == "subtract") {
+				z = parseFloat(x) - parseFloat(y);
+			}
+			if (selection == "multi") {
+				z = parseFloat(x) * parseFloat(y);
+			}
+			if (selection == "divi") {
+				z = parseFloat(x) / parseFloat(y);
+			}
+			if (selection == "modul") {
+				z = parseFloat(x) % parseFloat(y);
+			}
+    
+
+			if (x >= 0 && y >= 0) {
+				document.getElementById("result").innerHTML = "The result is " + z + ".";
+				alert(document.getElementById("result").innerHTML);
+				console.log(z);
+
+			} else {
+                alert("Error :(");
+			}
+
+    // this already works
+			if (y == 0 && selection == "divi") {
+				alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+            } else if (y == 0 && selection == "modul") {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+                }
+    
+           
+}
+    
+// result NaN => Not-A-Number
+    
+</script>
+
+</head>
+<body>
+
+   
+    <div class="container">
+        <h1> Simple Calculator</h1>
+        <hr>
+        <br>
+    
+		<h2>Enter the numbers and select one option:</h2>
+		<input type="text" id="firstNum" pattern="[0-9]+" placeholder="insert first number"/>
+		
+		<select id="dropDown">
+			<option>Choose</option>
+			<option value="add" id="add">+</option>
+			<option value="subtract" id="subtract">-</option>
+			<option value="multi" id="multi">*</option>
+			<option value="divi" id="divi">/</option>
+			<option value="modul" id="modul">%</option>
+		</select>
+		
+		<input type="text" id="secNum" pattern="[0-9]+" placeholder="insert second number"/><br>
+		
+		<input type="submit" value="Try Me!" onclick="myCalculator()">
+	
+		
+		<!-- <button onclick="calcuMath()">Try me!</button> -->
+		
+		<p id="result"></p>
+	</div>
+ 
+ 
+ 
+ 
+ <!--
+ 
+ <div class="navbar">
+    <form>
+         <input type="number" id="left" placeholder="insert a number">
+     </form>
+ 
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">Dropdown
+          </button>
+      
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">+</a>
+                <a href="#">-</a>
+                <a href="#">*</a>
+              </div>
+        </div> 
+        
+    <form>
+      <input type="number" id="right" placeholder="insert a number"><br><br>
+   
+  
+    <input type="submit" value="Try me!">
+     </form>
+
+</div>
+ 
+
+
+-->
+
+
+</body>
+</html>
